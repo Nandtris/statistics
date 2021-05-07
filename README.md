@@ -21,15 +21,15 @@
   - =[Σ(xi)²]/N-[Σ(xi)]²/N² 
   - μ~总体平均数
   - 数据点距离中间（均值）有多远
-  - 
  
 - 样本方差  
-  - sample variance = s²=[Σ(xi-x)]/n   
+  - sample variance = s²=[Σ(xi-x)²]/n   
   - x~样本平均数
   - sample variance 通常会低估总体方差
  
-- 无偏样本方差 unbised sample variance
-  - s²=[Σ(xi-x)]/(n-1)
+- 无偏样本方差 
+  - unbised sample variance
+  - s²=[Σ(xi-x)²]/(n-1)
   - 更好的样本方差公式
 
 - satandard deviation 标准差
@@ -37,3 +37,21 @@
   - 与样本单位一致，可以更好的比较数据
   - 方差（样本单位m)，求出的数据单位m²
 
+- Random Variable:X Y Z...
+  - discrete random variable 类似 if...else...函数
+    - P(Y=2)=0.5 Y=3 出现的概率是 0.5
+  - continuous random variable 
+    - 任何完全正好的值，其概率趋近于0
+    - P(|Y-2|<0.1)=微积分
+
+- 二项分布
+  - flip 5 coins：Head-1 Tails-0
+  - 出现正面的情况
+  - P(X=0)=P(TTTTT)=5*(1/32)=5/32
+  - P(X=1)=5\*(1/32)=5/32
+  - P(X=2)=(5\*4)/2\*(1/32)=5!/(2!\*3!)\*(1/32)=10/32
+  - P(X=3)=5!/(3!\*2!)\*(1/32)=10/32
+  - P(X=4)=5!/4!\*(1/32)=5/32
+  - P(X=5)=P(HHHHH)=1/32
+ 
+ 

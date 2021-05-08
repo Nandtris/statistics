@@ -9,16 +9,18 @@
 - midrange 中程数
 - stem-leaf
 - box-whiskers
-- Example:check cental tendency & average
+- Check cental tendency & average
+```
   - (2 3 3 3 3 100)
-  - mean   median   mode   midrange 
-  - 114/6  (3+3)/2  3      (2+100)/2
+  - mean---median---mode---midrange 
+  - 114/6--(3+3)/2--3------(2+100)/2
+```
 
 - 总体方差 p14 p16
   - population variance 
-  - = σ²=[Σ(xi-μ)²]/N  
-  - =[Σ(xi)²]/N-μ²  
-  - =[Σ(xi)²]/N-[Σ(xi)]²/N² 
+  - `= σ²=[Σ(xi-μ)²]/N`
+  - `=[Σ(xi)²]/N-μ² ` 
+  - `=[Σ(xi)²]/N-[Σ(xi)]²/N²` 
   - μ~总体平均数
   - 数据点距离中间（均值）有多远
  
@@ -29,7 +31,7 @@
  
 - 无偏样本方差 
   - unbised sample variance
-  - s²=[Σ(xi-x)²]/(n-1)
+  - `s²=[Σ(xi-x)²]/(n-1)`
   - 更好的样本方差公式
 
 - satandard deviation 标准差
@@ -42,15 +44,15 @@
     - P(Y=2)=0.5 Y=3 出现的概率是 0.5
   - continuous random variable 
     - 任何完全正好的值，如 P(Y=2)，其概率趋近于0
-    - P(|Y-2|<0.1)=微积分
+    - `P(|Y-2|<0.1) = 微积分求区间面积`
     - 概率相当于求 1.9<P<2.1 区间的面积
 
 - 二项分布
   - flip 5 coins：Head-1 Tails-0
-  - 出现正面的情况
+  - 出现正面 Head 的情况
   - 二项式系数(N, M)：`fact(N)/(fact(M)*fact(N-M))`
   ```
-  - P(X=0)=P(TTTTT)=5*(1/32)=5/32
+  - P(X=0)=P(TTTTT)=5*(1/2)=1/32
   - P(X=1)=5*(1/32)=5/32
   - P(X=2)=(5*4)/2*(1/32)=5!/(2!*3!)*(1/32)=10/32
   - P(X=3)=5!/(3!*2!)*(1/32)=10/32

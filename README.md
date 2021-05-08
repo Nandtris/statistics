@@ -60,4 +60,15 @@
   - P(X=5)=P(HHHHH)=1/32
   ```
  
- 
+ - 随机变量期望值（E(X)）= 总体均值
+   - 随机变量总体无穷，无法求和取平均值
+   - 因此以频率作为权重，计算出所有结果的加权平均值
+   - expect value of binomial distribution
+     ```
+     E(X)=Σk*(
+             (fact(n)/(fact(k)fact(n-k)) * 
+             P^k * (1-P)^(n-k)
+             ) (Σ:0<=k<=n)
+     化简后得到：
+     E(X)=np (n=试验次数，p=每次成功的概率)
+     ```

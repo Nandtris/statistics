@@ -81,3 +81,12 @@
   E(X) = λ
   P(X=k) = (λ^k/k!)*e^(-λ)
   ```
+ 
+- Normal Distribution P29
+`1/(σ*sqrt(2*pi*exp(((x-μ)/σ)^2))`
+  - 数据量愈多，二项分布越接近正态分布
+  - 正态分布是连续的，只能求区间概率密度
+  - 累计正态分布 CDF(x),小于x点的区域面积
+  - Excel公式：false-概率密度函数，true-累积分布函数
+  `normdist(x,mean,standard_deviation, true/false)`
+  

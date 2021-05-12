@@ -93,3 +93,19 @@
     - 68% = P(X=μ+/-σ)
     - 68% = P(X=μ+/-2σ)
     - 99.7% = P(X=μ+/-3σ)
+
+- Central Limit theorem P36
+  - 样本容量（n）趋于无穷大时，样本均值抽样分布接近正态分布
+  - μ(源数据集）= μ（样本）
+  - (样本σ)^2=(源数据集σ)^2/n
+  - 样本σ = standard error of the mean
+  - 样本容量越大，样本样本σ
+- Sample Distribution of the sample mean
+  - 从总体中随机抽取n=4个样本，求均值 --- sample mean
+  - 以上过程进行10000次，看样本均值分布状态 --- Sample Distribution
+- Skew 
+  - pos skew --- 正偏态分布，右边尾巴拖的较长
+  - negative skew
+- Kurtosis ？
+  - pos K --- 正峰度，相对正态分布，值越大分布曲线越尖瘦
+  - negative K --- 负峰度，相对正态分布，值越小分布曲线越粗胖

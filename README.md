@@ -109,3 +109,26 @@
 - Kurtosis ？
   - pos K --- 正峰度，相对正态分布，值越大分布曲线越尖瘦
   - negative K --- 负峰度，相对正态分布，值越小分布曲线越粗胖
+
+
+- 置信区间 P40
+> 20w apples. one sample=36, mean=112g, σ=40g. <br>
+> Question: 20w个苹果中均值落在100~124g之间的概率是多少
+- Solution
+```
+100<112=σSample<124
+# xavg = the Mean Of One Sample
+P(μ is with 12 of xavg) 
+=P(xavg is with 12 of μ)
+# μxavg = 样本均值抽样分布均值 = 总体样本均值μ
+=P(xavg is with 12 of μxavg)
+# 转化为求：某一特定样本均值落在样本均值抽样分布均值左右12g范围内的概率
+# 求 satadard Z-score
+# 用最好的估计来代替总体标准差 σ ≈ 40
+# σxavg ≈ 40/sqrt(36)=6.67
+# z = 12/6.67 = 1.8
+# σxavg = 样本均值抽样分布标准差
+=P(xavg is with 1.8 σxavg of μxavg)
+# 查 z 分表，找 <=1.89 值 v
+= (v-0.5)*2
+```

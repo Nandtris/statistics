@@ -16,7 +16,7 @@
   - 114/6--(3+3)/2--3------(2+100)/2
 ```
 
-- 总体方差 p14 p16
+### 总体方差 p14 p16
   - population variance 
   - `= σ²=[Σ(xi-μ)²]/N`
   - `=[Σ(xi)²]/N-μ² ` 
@@ -24,22 +24,22 @@
   - μ~总体平均数
   - 数据点距离中间（均值）有多远
  
-- 样本方差  
+### 样本方差  
   - sample variance = s²=[Σ(xi-x)²]/n   
   - x~样本平均数
   - sample variance 通常会低估总体方差
  
-- 无偏样本方差 
+### 无偏样本方差 
   - unbised sample variance
   - `s²=[Σ(xi-x)²]/(n-1)`
   - 更好的样本方差公式
 
-- satandard deviation 标准差
+### satandard deviation 标准差
   - satandard deviation = sqrt（σ²）
   - 与样本单位一致，可以更好的比较数据
   - 方差（样本单位m)，求出的数据单位m²
 
-- Random Variable:X Y Z...
+### Random Variable:X Y Z...
   - discrete random variable 类似 if...else...函数
     - P(Y=2)=0.5 Y=3 出现的概率是 0.5
   - continuous random variable 
@@ -47,7 +47,7 @@
     - `P(|Y-2|<0.1) = 微积分求区间面积`
     - 概率相当于求 1.9<P<2.1 区间的面积
 
-- 二项分布
+### 二项分布
   - flip 5 coins：Head-1 Tails-0
   - 出现正面 Head 的情况
   - 二项式系数(N, M)：`fact(N)/(fact(M)*fact(N-M))`
@@ -60,7 +60,7 @@
   - P(X=5)=P(HHHHH)=1/32
   ```
  
- - 随机变量期望值（E(X)）
+### 随机变量期望值（E(X)）
    - = 总体均值
    - 随机变量总体无穷，无法求和取平均值
    - 因此以频率作为权重，计算出所有结果的加权平均值
@@ -74,7 +74,7 @@
      E(X)=np (n=试验次数，p=每次成功的概率)
      ```
 
-- Poisson distribution 泊松分布 P26
+### Poisson distribution 泊松分布 P26
   - 满足三个条件，它就服从"泊松分布"
     - 1、事件X的发生是小概率事件
     - 2、事件X的发生是随机而且互相独立的
@@ -98,7 +98,7 @@
   - 当n很大时（还没达到连续的程度），可以用泊松分布近似代替二项分布；当n再变大，几乎可以看成连续时，二项分布和泊松分布都可以用正态分布来代替！
 
 
-- Normal Distribution P29
+### Normal Distribution P29
   - `1/(σ*sqrt(2*pi*exp(((x-μ)/σ)^2))`
   - 正态分布的密度函数
     - 关于μ对称，并在μ处取最大值，
@@ -114,7 +114,7 @@
     - 95% = P(X=μ+/-2σ)
     - 99.7% = P(X=μ+/-3σ)
 
-- Central Limit theorem P36
+### Central Limit theorem P36
   - 样本容量（n）趋于无穷大时，样本均值抽样分布接近正态分布
   - μ(源数据集）= μ（样本）
   - (样本σ)^2=(源数据集σ)^2/n
@@ -136,7 +136,7 @@
   - 若随机变量满足一定的条件，当n足够大时，均值近似服从正态分布，这就是中心极限定理的主要思想
   - 大数定律是指在随机试验中，每次出现的结果不同，但是大量重复试验出现的结果的平均值却几乎总是接近于某个确定的值
   
-- 置信区间 P40
+### 置信区间 P40
 > 20w apples. one sample=36, mean=112g, σ=40g. <br>
 > Question: 20w个苹果中均值落在100~124g之间的概率是多少
 - Solution
@@ -157,3 +157,32 @@ P(μ is with 12 of xavg)
 # 查 z 分表，找 <=1.89 值 v
 = (v-0.5)*2
 ```
+
+### P47 Hypothesis Test and P-value
+testing the effect of a drug on response time by injecting 100 rats,<br>
+the mean response for rats not injected with drug is 1.2 second,<br>
+the mean if the 100 injected rats' response times is 1.05s with <br>
+a sample standard deviation of 0.5 second,<br>
+Do you think that the drug has an effect on response time?<br>
+
+- Solution(null/alternative hypothetcal)
+  - H0: Drug was no effect ---> mean = 1.2
+  - H1: Drug was an effect ---> mean != 1.2 when the drug is given 
+  - 如果 H0 is True, 得到得到样本(n=100, mean=1.05, standard devation=.5)的概率是多
+  - 甚至是更极端情况的概率（比如 样本均值 ±3 个标准差之外的概率）
+  - 如果这个概率非常非常小，就可以拒绝 H0
+  - 继而认为 H1 正确
+  - P-value < 5% reject the null hypothesis
+  ```
+  样本均值抽样分布标准差 ≈ .5/sqrt(100) = .05
+  Z-score = (1.2 - 1.05)/.05 = 3
+  P-value = 1 - P(X=3σ) = 1 - 99.7% = .003
+  所以拒绝 H0
+  ```
+  
+ 
+  
+
+
+
+

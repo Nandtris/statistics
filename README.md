@@ -136,15 +136,15 @@
   - 若随机变量满足一定的条件，当n足够大时，均值近似服从正态分布，这就是中心极限定理的主要思想
   - 大数定律是指在随机试验中，每次出现的结果不同，但是大量重复试验出现的结果的平均值却几乎总是接近于某个确定的值
   
-### 置信区间 P40
-> 20w apples. one sample=36, mean=112g, σ=40g. <br>
+### Confidence Intercal 置信区间 P40
+> 20w apples. one sample: n=36, mean=112g, σ=40g. <br>
 > Question: 20w个苹果中均值落在100~124g之间的概率是多少
 - Solution
 ```
 100<112=σSample<124
 # xavg = the Mean Of One Sample
-P(μ is with 12 of xavg) 
-=P(xavg is with 12 of μ)
+P(μ is within 12 of xavg) 
+=P(xavg is within 12 of μ)
 # μxavg = 样本均值抽样分布均值 = 总体样本均值μ
 =P(xavg is with 12 of μxavg)
 # 转化为求：某一特定样本均值落在样本均值抽样分布均值左右12g范围内的概率
@@ -157,6 +157,14 @@ P(μ is with 12 of xavg)
 # 查 z 分表，找 <=1.89 值 v
 = (v-0.5)*2
 ```
+
+### Bernoulli Distribution 
+- Typical case
+  - 离散型
+  - failure 0 (1-p)
+  - Success 1 p
+  - mean=P
+  - 方差=P(1-P)
 
 ### P47 Hypothesis Test and P-value
 testing the effect of a drug on response time by injecting 100 rats,<br>
@@ -172,6 +180,9 @@ Do you think that the drug has an effect on response time?<br>
   - 甚至是更极端情况的概率（比如 样本均值 ±3 个标准差之外的概率）
   - 如果这个概率非常非常小，就可以拒绝 H0
   - 继而认为 H1 正确
+  - two-tailed test 双侧检验
+    - Drug was effect-posotive >1.2
+    - Drug was effect-negative <1.2
   - P-value < 5% reject the null hypothesis
   ```
   样本均值抽样分布标准差 ≈ .5/sqrt(100) = .05
@@ -179,10 +190,41 @@ Do you think that the drug has an effect on response time?<br>
   P-value = 1 - P(X=3σ) = 1 - 99.7% = .003
   所以拒绝 H0
   ```
+
+### P48 one tailed test 
+  - H0 Drug was no effect ---> mean = 1.2
+  - H1 Drug lowers effect ---> mean < 1.2 when the drug is given 
+  - if H0, P(result lowers than 1.05s) = P-value = .003/2 = .0015
+  - 得到结果低于1.05s的概率只有.15%, so reject H0
+
+### P49 z-statistic and t-statistic
+- 样本容量n，决定z or t
+  - if n > 30 z-statistic Normal Distribution
+  - if n < 30 t-statistic t-Distribution
+
+### P50 Type 1 Error
+- Reject H0 even though it is True
+
+### P51 小样本假设检验
+A new engine standard:  <20ppm <br>
+now enginessamples: n=10, mean=17.17, s=2.98 <br>
+Question: Does the data supply sufficient evidence to conclude <br>
+that this type of engine meets the new standard? Assume Type 1 error P=0.01.
+- H0 mean(sample)=20ppm
+- H1 mean(sample)<20
+- one tailed test
+- Assum H0 is True, then
+```
+n=10 < 30 ---> t-statistic
+t = (17.17-20)/(2.98/sqrt(10)) = -3
+t_table check 自由度=10-1=9,累计概率=1-1%=99% 的值为2.821
+# t 标准分布均值=0，两段对称，只是尾巴部分相对正态分布肥而已
+# t_table 显示 positive 部分值
+也即 <-2.821 区间概率 1%， -3<-2.821 reject H0
+```
+- P53 大样本占比假设检验
+  - Bernoulii distribution 
+  - significant level
+  - P_value
+
   
- 
-  
-
-
-
-

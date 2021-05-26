@@ -227,4 +227,25 @@ t_table check 自由度=10-1=9,累计概率=1-1%=99% 的值为2.821
   - significant level
   - P_value
 
-  
+## Review
+- None
+- Null
+- NaN
+
+### P69-70 线性回归公式与决定系数 sqrt(r)
+- 线性回归方程
+  - `LINE y = mx + b`
+  - 最小化点到直线的总平方误差直线
+- 斜率
+  - `m = (mean(xy)-mean(x)meax(y))/(mean(x^2)-(mean(x))^2)`
+- 截距
+  - `b = mean(y) - m*mean(x)`
+- 决定系数 sqrt(r)
+  - `SE(LINE)/SE(mean(y))`
+  - 衡量直线拟合程度好坏
+  - 回归线没有描述的波动，即总波动中不能由直线或x波动解释
+    - `SE(LINE) = (y1-y)^2 + ... + (yn-y)^2`
+  - total variation in y
+    - `SE(mean(y)) = (y1-mean(y))^2 + ... + (yn--mean(y))^2`
+  - what percentage of the variation in y is described by the variation in x or LINE
+    - `1 - sqrt(r)`

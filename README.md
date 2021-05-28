@@ -264,7 +264,7 @@ t_table check 自由度=10-1=9,累计概率=1-1%=99% 的值为2.821
   - 随机变量对自身的协方差 = 该随机变量的方差
   - 斜率 `m = cov(X,Y)/var(X)`
 
-###　P72 Chi square distribution
+### P72 Chi square distribution
 - 检验理论分布同观测结果的吻合度
 - Chi square 统计量
   - `Chi square = Σ[(fi-Fi)^2/Fi] (1<= i <=n)`

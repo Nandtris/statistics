@@ -251,3 +251,23 @@ t_table check 自由度=10-1=9,累计概率=1-1%=99% 的值为2.821
     - `SE(mean(y)) = (y1-mean(y))^2 + ... + (yn--mean(y))^2`
   - what percentage of the variation in y is described by the variation in x or LINE
     - `1 - sqrt(r)`
+
+
+### P71 Covariance 
+- covariance between 2 random varianbles
+- 两变量多大程度上一同变化
+- `cov(X, Y)=E[(X-e[X])(Y-E[Y])] = E[XY]-E[X]E[Y]'
+- 用样本近似估计：
+  - `E[XY]≈mean(XY) E[X]≈mean(X) E[Y]≈mean(Y)`
+  - `cov(X,Y) ≈ mean(XY)-mean(X)mean(Y)`
+  - 斜率 `m = cov(X,Y)/cov(X,X)`
+  - 随机变量对自身的协方差 = 该随机变量的方差
+  - 斜率 `m = cov(X,Y)/var(X)`
+
+###　P72 Chi square distribution
+- 检验理论分布同观测结果的吻合度
+- Chi square 统计量
+  - `Chi square = Σ[(fi-Fi)^2/Fi] (1<= i <=n)`
+  - fi 实际观察的量
+  - Fi 运用目标分布计算出的量
+  - 当样本n趋于无穷大时，统计量收敛于 Chi square distribution
